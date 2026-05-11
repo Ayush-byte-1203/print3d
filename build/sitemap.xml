@@ -6,289 +6,223 @@
 
   <url>
     <loc>https://printin3d.in/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://printin3d.in/about</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://printin3d.in/contact</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://printin3d.in/faq</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://printin3d.in/search</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://printin3d.in/terms</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://printin3d.in/return-policy</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/custom-design</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/bespoke-3d-design</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/home-and-decor</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/artisanal-home-decor</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/stands-and-accessories</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/desk-and-tech-gear</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/models</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/collector-s-models</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/photo-frames</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/cinematic-photo-frames</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/standing-alphabets</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/signature-monogram</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/commando</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/tactical-ghost</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/knitted-cat</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/articulated-lobster</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/knitted-dog</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/prehistoric-dino</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/knited-rabbit</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/flexi-octopus</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/pokeball</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/iron-gym-plate</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/flexy-shark</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/ocean-motion-shark</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/flexy-dino</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/midnight-skeleton</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/flexy-octopus</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/knitted-studio-cat</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/flexy-skeleton</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/knitted-studio-dog</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/ps5-keychain</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/next-gen-console-mini</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/flexy-lobster</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/knitted-studio-rabbit</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/gym-plate</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/champion-shuttlecock</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/shuttelcock</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/master-pokeball</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/keychains/repper</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/signature-keychains/tactical-repper</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/home-and-decor/home-sweet-home</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/artisanal-home-decor/serenity-deskplate</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/home-and-decor/f1-calender</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/artisanal-home-decor/f1-grand-prix-tracker</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/home-and-decor/honeycomb-stand</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/artisanal-home-decor/precision-honeycomb-stand</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/home-and-decor/f1-deskplate</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/artisanal-home-decor/aero-f1-deskplate</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/home-and-decor/name-letter-sign</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/artisanal-home-decor/personalized-name-stand</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/home-and-decor/car-garage-keyholder</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/artisanal-home-decor/car-garage-keyholder</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/stands-and-accessories/minimalist-headphone-stand</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/desk-and-tech-gear/apex-headphone-studio</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/stands-and-accessories/wizard</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/collector-s-models/aero-formula-series-01</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://printin3d.in/product/stands-and-accessories/sci-fi-marine</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/stands-and-accessories/orc-grunt</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/models/mini-f1-car</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/models/dna-model</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/models/solar-system</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/models/bridge-building</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/models/anatomy-set</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/photo-frames/lithophane-box</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/photo-frames/curved-frame</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/photo-frames/heart-shape</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/photo-frames/rotating-cube</loc>
-    <lastmod>2026-05-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://printin3d.in/product/photo-frames/wall-mosaic</loc>
-    <lastmod>2026-05-09</lastmod>
+    <loc>https://printin3d.in/product/cinematic-photo-frames/lumina-lithophane-box</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
