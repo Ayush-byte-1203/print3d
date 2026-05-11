@@ -5,14 +5,11 @@ import {
     Send, 
     MessageSquare, 
     Mail, 
-    Phone, 
     MapPin, 
-    CheckCircle2, 
     Zap, 
     ShieldCheck, 
     Clock, 
     ChevronRight,
-    Target,
     Box
 } from 'lucide-react';
 import './CSS/Contact.css';

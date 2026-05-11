@@ -6,7 +6,6 @@ import ProductDetails from './components/ProductDetails';
 import SubProductDetails from './components/SubProductDetails';
 import Cart from './components/Cart';
 import CheckoutModal from './components/CheckoutModal';
-import Contact from './components/Contact';
 import AboutUs from './components/AboutUs';
 import TermsAndConditions from './components/TermsAndConditions';
 import ReturnPolicy from './components/ReturnPolicy';

@@ -57,8 +57,8 @@ const Footer = () => {
                             high-precision custom creations for hobbyists and engineers alike.
                         </p>
                         <div className="footer-social-links">
-                            <a href="#" aria-label="Instagram"><Instagram /></a>
-                            <a href="#" aria-label="Facebook"><Facebook /></a>
+                            <a href="#!" aria-label="Instagram"><Instagram /></a>
+                            <a href="#!" aria-label="Facebook"><Facebook /></a>
                             <a href="https://wa.me/917043591952" target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle /></a>
                         </div>
                     </div>

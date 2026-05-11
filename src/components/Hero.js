@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Truck, MessageCircle, ChevronRight } from 'lucide-react';
+import { ShieldCheck, Truck, ChevronRight } from 'lucide-react';
 import './CSS/Hero.css';
 
 const Hero = () => {

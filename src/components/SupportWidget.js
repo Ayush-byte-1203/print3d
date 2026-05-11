@@ -1,5 +1,4 @@
 import React from 'react';
-import { MessageCircle, X } from 'lucide-react';
 import './CSS/SupportWidget.css';
 
 const SupportWidget = () => {

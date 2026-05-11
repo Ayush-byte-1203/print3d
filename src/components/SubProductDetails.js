@@ -12,8 +12,7 @@ import {
     Scale, 
     Box, 
     PenTool, 
-    HelpCircle,
-    CheckCircle2
+    HelpCircle
 } from 'lucide-react';
 import './CSS/SubProductDetails.css';
 

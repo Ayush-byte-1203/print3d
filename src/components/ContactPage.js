@@ -6,17 +6,13 @@ import {
     MessageSquare, 
     Mail, 
     Phone, 
-    MapPin, 
     Clock, 
     ShieldCheck, 
-    Wrench,
     Globe,
     CheckCircle2,
-    ArrowRight,
     ChevronDown,
     Zap,
     Target,
-    Box,
     Sparkles
 } from 'lucide-react';
 import './CSS/Contact.css';

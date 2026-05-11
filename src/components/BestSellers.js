@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { subProductsMap, topicsData } from '../data/productsData';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { ShoppingCart, ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import './CSS/BestSellers.css';
 
 // Manually curated bestseller product references

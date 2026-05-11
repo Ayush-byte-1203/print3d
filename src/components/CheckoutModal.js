@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
-import { X, MessageSquare, MapPin, User, Phone, ShieldCheck } from 'lucide-react';
+import { X, MessageSquare, MapPin, User, ShieldCheck } from 'lucide-react';
 import './CSS/CheckoutModal.css';
 
 const CheckoutModal = ({ isOpen, onClose }) => {

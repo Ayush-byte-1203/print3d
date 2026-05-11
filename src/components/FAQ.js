@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { 
-    ChevronDown, 
     MessageCircle, 
     Search, 
     Info, 
@@ -14,66 +13,66 @@ import {
 } from 'lucide-react';
 import './CSS/FAQ.css';
 
+const faqData = [
+    {
+        category: "General",
+        icon: Info,
+        items: [
+            {
+                q: "What is 3D printing and how does it work?",
+                a: "3D printing, or additive manufacturing, is the process of making three-dimensional solid objects from a digital file. Our printers build objects layer-by-layer using high-quality PLA plastic."
+            },
+            {
+                q: "Is the material durable?",
+                a: "Yes! We use high-strength PLA and PETG. While 3D prints are lightweight, they are quite durable for décor, collectibles, and functional prototypes."
+            }
+        ]
+    },
+    {
+        category: "Ordering",
+        icon: Package,
+        items: [
+            {
+                q: "How do I place a custom order?",
+                a: "Browse our products, select your customization options, and hit 'Order via WhatsApp'. This sends us your exact choices instantly for confirmation."
+            },
+            {
+                q: "Can I cancel my order?",
+                a: "Since products are made-to-order, cancellations are only possible within 12 hours of placing the order, before the printing process begins."
+            }
+        ]
+    },
+    {
+        category: "Shipping",
+        icon: Truck,
+        items: [
+            {
+                q: "How long does shipping take?",
+                a: "Standard delivery takes 5-7 business days. Printing typically takes 1-3 days, followed by express shipping pan-India."
+            },
+            {
+                q: "Do you offer tracking?",
+                a: "Yes! Once your order is shipped, we will share the tracking link with you directly on WhatsApp."
+            }
+        ]
+    },
+    {
+        category: "Payments",
+        icon: CreditCard,
+        items: [
+            {
+                q: "How do I pay?",
+                a: "We currently accept payments via UPI, Google Pay, and PhonePe. Payment details are shared during our WhatsApp consultation."
+            }
+        ]
+    }
+];
+
 const FAQ = ({ standalone = false }) => {
     const revealRef = useScrollReveal();
     const [openIndex, setOpenIndex] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [activeCategory, setActiveCategory] = useState('All');
-
-    const faqData = [
-        {
-            category: "General",
-            icon: Info,
-            items: [
-                {
-                    q: "What is 3D printing and how does it work?",
-                    a: "3D printing, or additive manufacturing, is the process of making three-dimensional solid objects from a digital file. Our printers build objects layer-by-layer using high-quality PLA plastic."
-                },
-                {
-                    q: "Is the material durable?",
-                    a: "Yes! We use high-strength PLA and PETG. While 3D prints are lightweight, they are quite durable for décor, collectibles, and functional prototypes."
-                }
-            ]
-        },
-        {
-            category: "Ordering",
-            icon: Package,
-            items: [
-                {
-                    q: "How do I place a custom order?",
-                    a: "Browse our products, select your customization options, and hit 'Order via WhatsApp'. This sends us your exact choices instantly for confirmation."
-                },
-                {
-                    q: "Can I cancel my order?",
-                    a: "Since products are made-to-order, cancellations are only possible within 12 hours of placing the order, before the printing process begins."
-                }
-            ]
-        },
-        {
-            category: "Shipping",
-            icon: Truck,
-            items: [
-                {
-                    q: "How long does shipping take?",
-                    a: "Standard delivery takes 5-7 business days. Printing typically takes 1-3 days, followed by express shipping pan-India."
-                },
-                {
-                    q: "Do you offer tracking?",
-                    a: "Yes! Once your order is shipped, we will share the tracking link with you directly on WhatsApp."
-                }
-            ]
-        },
-        {
-            category: "Payments",
-            icon: CreditCard,
-            items: [
-                {
-                    q: "How do I pay?",
-                    a: "We currently accept payments via UPI, Google Pay, and PhonePe. Payment details are shared during our WhatsApp consultation."
-                }
-            ]
-        }
-    ];
 
     const categories = ['All', ...faqData.map(d => d.category)];
 
