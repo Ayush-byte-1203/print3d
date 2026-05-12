@@ -1,13 +1,16 @@
 /* ══════════════════════════════════════════
-   PREMIUM CHECKOUT MODAL — Final Mobile Fix
+   PREMIUM CHECKOUT MODAL — Final Robust Mobile Fix
    ══════════════════════════════════════════ */
 .checkout-overlay {
     position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    z-index: 9999; /* Ensure it's above everything */
+    z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,11 +18,13 @@
     animation: fadeIn 0.3s ease;
 }
 
-/* Force hide any floating widgets */
+/* Force hide all floating UI */
 body.body-checkout-open .support-widget-container,
 body.body-checkout-open .whatsapp-float,
-body.body-checkout-open #scroll-to-top {
+body.body-checkout-open #scroll-to-top,
+body.body-checkout-open .mobile-menu-btn {
     display: none !important;
+    visibility: hidden !important;
 }
 
 .checkout-modal-premium {
@@ -33,8 +38,8 @@ body.body-checkout-open #scroll-to-top {
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden; /* Header and form manage their own space */
-    animation: modalSlideUp 0.5s var(--ease-out-expo);
+    overflow: hidden;
+    animation: modalSlideUp 0.5s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 @keyframes modalSlideUp {
@@ -49,19 +54,19 @@ body.body-checkout-open #scroll-to-top {
     justify-content: space-between;
     align-items: center;
     background: #FFFFFF;
-    flex-shrink: 0; /* Never shrink the header */
-    z-index: 10;
+    flex-shrink: 0;
+    z-index: 20;
 }
 
-.checkout-header-title h2 { font-size: 1.3rem; font-weight: 800; margin: 0; }
-.checkout-header-title p { font-size: 0.8rem; color: var(--color-text-muted); margin: 4px 0 0; }
+.checkout-header-title h2 { font-size: 1.3rem; font-weight: 800; margin: 0; color: #000; }
+.checkout-header-title p { font-size: 0.8rem; color: #666; margin: 4px 0 0; }
 
 .checkout-close {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: none;
-    background: var(--color-bg-secondary);
+    background: #f1f5f9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,13 +74,13 @@ body.body-checkout-open #scroll-to-top {
     transition: all 0.3s ease;
 }
 
-/* ── SCROLLABLE FORM ── */
+/* ── Form structure ── */
 .checkout-form-premium {
-    flex: 1;
-    min-height: 0; /* CRITICAL for flex scrolling */
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    height: 100%;
+    min-height: 0;
+    flex: 1;
 }
 
 .checkout-sections-scroll {
@@ -84,6 +89,7 @@ body.body-checkout-open #scroll-to-top {
     padding: 32px;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
+    background: #fff;
 }
 
 .checkout-section { margin-bottom: 32px; }
@@ -94,8 +100,7 @@ body.body-checkout-open #scroll-to-top {
     font-size: 0.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--color-text-main);
+    color: #333;
     margin-bottom: 20px;
 }
 
@@ -111,30 +116,29 @@ body.body-checkout-open #scroll-to-top {
     font-size: 0.8rem;
     font-weight: 700;
     margin-bottom: 8px;
-    color: var(--color-text-main);
+    color: #444;
 }
 
 .checkout-input-group input, 
 .checkout-input-group textarea {
     width: 100%;
     padding: 14px 18px;
-    background: var(--color-bg-secondary);
-    border: 1px solid var(--color-border);
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
-    font-size: 1rem;
+    font-size: 16px; /* Prevents iOS zoom */
     outline: none;
-    transition: all 0.3s ease;
+    color: #000;
 }
 
 .checkout-input-group textarea { height: 90px; resize: none; }
 
-/* ── STICKY FOOTER ── */
 .checkout-footer-premium {
     padding: 24px 32px;
     border-top: 1px solid var(--color-border);
     background: #FFFFFF;
-    flex-shrink: 0; /* Never shrink the footer */
-    z-index: 10;
+    flex-shrink: 0;
+    z-index: 20;
 }
 
 .checkout-summary-mini {
@@ -160,20 +164,20 @@ body.body-checkout-open #scroll-to-top {
     justify-content: center;
     gap: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-/* ── MOBILE OVERRIDES ── */
+/* ── MOBILE OPTIMIZATIONS ── */
 @media (max-width: 768px) {
     .checkout-overlay {
         padding: 0;
-        align-items: flex-end; /* Native bottom sheet style */
+        align-items: flex-end;
     }
 
     .checkout-modal-premium {
+        max-height: 95vh;
+        max-height: -webkit-fill-available;
         border-radius: 24px 24px 0 0;
-        max-height: 95vh; /* Take up most of screen but leave space at top */
-        animation: mobileSlideUp 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+        animation: mobileSlideUp 0.6s cubic-bezier(0.32, 0.72, 0, 1);
     }
 
     @keyframes mobileSlideUp {
@@ -181,10 +185,14 @@ body.body-checkout-open #scroll-to-top {
         to { transform: translateY(0); }
     }
 
+    .checkout-header-premium {
+        padding: 16px 20px;
+    }
+
     .checkout-sections-scroll {
-        padding: 24px;
-        /* Padding to prevent keyboard from hiding the last input before scroll */
-        padding-bottom: 60px; 
+        padding: 20px;
+        /* Massive bottom padding to ensure keyboard doesn't hide the submit area */
+        padding-bottom: 200px; 
     }
 
     .checkout-input-row {
@@ -193,13 +201,22 @@ body.body-checkout-open #scroll-to-top {
     }
 
     .checkout-footer-premium {
-        padding: 20px 24px calc(20px + env(safe-area-inset-bottom));
+        padding: 16px 20px calc(16px + env(safe-area-inset-bottom));
     }
 }
 
-/* Landscape Mode Fix */
-@media (max-height: 480px) {
-    .checkout-modal-premium { max-height: 100vh; border-radius: 0; }
-    .checkout-sections-scroll { padding: 15px 24px; }
-    .checkout-footer-premium { padding: 10px 24px; }
+/* Extra small devices */
+@media (max-width: 380px) {
+    .checkout-header-title h2 { font-size: 1.1rem; }
+    .checkout-section-title { font-size: 0.7rem; }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .checkout-modal-premium {
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    .checkout-sections-scroll { padding: 10px 20px; }
+    .checkout-footer-premium { padding: 8px 20px; }
 }
