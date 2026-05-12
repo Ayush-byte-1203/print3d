@@ -1,11 +1,11 @@
 /* ══════════════════════════════════════════
    CINEMATIC HERO — Premium Overhaul
-══════════════════════════════════════════ */
+   ══════════════════════════════════════════ */
 .hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    min-height: 800px;
+    min-height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,15 +31,16 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 160px; /* Coverage for navbar + breathing room */
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 100%);
+    height: 160px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
     z-index: 5;
     pointer-events: none;
 }
+
 .hero-overlay-vignette {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.8) 100%);
+    background: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.8) 100%);
     z-index: 2;
     pointer-events: none;
 }
@@ -47,7 +48,7 @@
 .hero-overlay-spotlight {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 40%, rgba(37,99,235,0.15) 0%, transparent 60%);
+    background: radial-gradient(circle at 50% 40%, rgba(37, 99, 235, 0.15) 0%, transparent 60%);
     z-index: 3;
     pointer-events: none;
     animation: spotlightPulse 8s ease-in-out infinite;
@@ -109,11 +110,11 @@
 }
 
 .hero-desc-refined {
-    font-size: 1.25rem;
-    color: rgba(255,255,255,0.7);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.9);
     max-width: 620px;
-    margin: 0 auto clamp(40px, 6vw, 64px);
-    line-height: 1.8;
+    margin: 0 auto clamp(32px, 6vw, 64px);
+    line-height: 1.6;
     font-weight: 400;
     animation: slideUpReveal 1.4s var(--ease-out-expo) 0.4s both;
 }
@@ -127,48 +128,48 @@
 .hero-cta-sequence {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 64px;
+    gap: 16px;
+    margin-bottom: 48px;
     animation: fadeIn 1s var(--ease-out) 0.6s both;
 }
 
 .btn-cinematic-primary {
     background: var(--color-primary);
     color: #FFFFFF;
-    padding: clamp(14px, 2vw, 20px) clamp(32px, 4vw, 48px);
+    padding: clamp(14px, 2vw, 18px) clamp(24px, 4vw, 48px);
     border-radius: var(--radius-full);
     font-weight: 700;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: all var(--t-base) var(--ease-spring);
     box-shadow: var(--shadow-btn);
 }
 
 .btn-cinematic-primary:hover {
-    transform: translateY(-6px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(37,99,235,0.4);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.4);
     background: var(--color-primary-hover);
 }
 
 .btn-cinematic-secondary {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     color: #FFFFFF;
-    padding: clamp(14px, 2vw, 20px) clamp(32px, 4vw, 48px);
+    padding: clamp(14px, 2vw, 18px) clamp(24px, 4vw, 48px);
     border-radius: var(--radius-full);
     font-weight: 600;
     text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(12px);
     transition: all var(--t-base) var(--ease-out-expo);
 }
 
 .btn-cinematic-secondary:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(255,255,255,0.4);
-    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-4px);
 }
 
 /* ── Minimal Trust Bar ── */
@@ -176,89 +177,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 32px;
     animation: fadeIn 1.5s var(--ease-out) 1s both;
     padding-top: 24px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .trust-item-mini {
     display: flex;
     align-items: center;
-    gap: 12px;
-    color: rgba(255,255,255,0.4);
-    font-size: 0.75rem;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.trust-item-mini svg {
-    color: var(--color-primary);
-}
+.trust-item-mini svg { color: var(--color-primary); }
 
-/* ── Scroll Prompt ── */
-.hero-scroll-prompt {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    z-index: 10;
-    color: rgba(255,255,255,0.4);
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 700;
-}
-
-.scroll-mouse {
-    width: 24px;
-    height: 40px;
-    border: 2px solid rgba(255,255,255,0.2);
-    border-radius: 12px;
-    position: relative;
-}
-
-.scroll-wheel {
-    width: 2px;
-    height: 8px;
-    background: #FFFFFF;
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 1px;
-    animation: scrollAnim 2s infinite;
-}
-
-@keyframes scrollAnim {
-    0% { opacity: 1; transform: translateX(-50%) translateY(0); }
-    100% { opacity: 0; transform: translateX(-50%) translateY(15px); }
-}
-
-/* ── Responsive ── */
+/* ── Responsive Overrides ── */
 @media (max-width: 1024px) {
-    .hero-title-cinematic { font-size: 4.5rem; }
-    .hero-stats-glass { padding: 20px 40px; }
-    .stat-glass-divider { margin: 0 24px; }
+    .hero { height: 90vh; min-height: 600px; }
 }
 
 @media (max-width: 768px) {
-    .hero-title-cinematic { font-size: 3.5rem; }
-    .hero-desc-refined { font-size: 1.1rem; }
-    .hero-trust-bar-minimal {
-        flex-direction: column;
-        gap: 16px;
-        padding-top: 32px;
-    }
+    .hero { height: 85vh; min-height: 550px; }
+    .hero-container { padding-top: 60px; }
+    .hero-trust-bar-minimal { flex-direction: column; gap: 12px; }
+    .hero-cta-sequence { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto 48px; }
 }
 
 @media (max-width: 480px) {
-    .hero-title-cinematic { font-size: 2.8rem; }
-    .hero-cta-sequence { flex-direction: column; align-items: stretch; width: 100%; }
-    .btn-cinematic-primary, .btn-cinematic-secondary { justify-content: center; }
+    .hero { height: 80vh; min-height: 500px; }
+    .hero-container { padding-top: 40px; }
+    .hero-desc-refined { margin-bottom: 32px; }
 }

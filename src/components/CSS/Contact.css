@@ -58,7 +58,7 @@
 
 .hero-subtitle-p {
     font-size: 1.25rem;
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
     line-height: 1.6;
     max-width: 600px;
     margin-bottom: 48px;
@@ -76,10 +76,12 @@
     gap: 12px;
     font-size: 0.85rem;
     font-weight: 700;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
-.trust-p-item svg { color: var(--color-primary); }
+.trust-p-item svg {
+    color: var(--color-primary);
+}
 
 .hero-bg-accent-p {
     position: absolute;
@@ -155,8 +157,16 @@
     flex-shrink: 0;
 }
 
-.b-info-p h4 { font-size: 1rem; margin-bottom: 4px; }
-.b-info-p p { font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.4; }
+.b-info-p h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.b-info-p p {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
 
 .contact-channels-card-p {
     padding: 40px;
@@ -180,7 +190,9 @@
     gap: 16px;
 }
 
-.channel-row-p svg { color: var(--color-primary); }
+.channel-row-p svg {
+    color: var(--color-primary);
+}
 
 .c-info-p label {
     display: block;
@@ -190,7 +202,11 @@
     color: var(--color-text-muted);
 }
 
-.c-info-p p { font-size: 1rem; font-weight: 700; color: var(--color-text-main); }
+.c-info-p p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
 
 .status-badge-p {
     display: inline-flex;
@@ -222,8 +238,15 @@
 }
 
 @keyframes statusPulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(2.5); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
 }
 
 /* Interactive Quick Help */
@@ -252,9 +275,17 @@
     color: var(--color-text-main);
 }
 
-.faq-arrow-p { transition: transform 0.3s ease; }
-.mini-faq-item-p.active .faq-arrow-p { transform: rotate(180deg); }
-.mini-faq-item-p.active { border-color: var(--color-primary); }
+.faq-arrow-p {
+    transition: transform 0.3s ease;
+}
+
+.mini-faq-item-p.active .faq-arrow-p {
+    transform: rotate(180deg);
+}
+
+.mini-faq-item-p.active {
+    border-color: var(--color-primary);
+}
 
 .faq-a-p {
     max-height: 0;
@@ -290,7 +321,10 @@
     margin-bottom: 8px;
 }
 
-.portal-subtitle-p { color: var(--color-text-muted); margin-bottom: 40px; }
+.portal-subtitle-p {
+    color: var(--color-text-muted);
+    margin-bottom: 40px;
+}
 
 .portal-type-toggle-p {
     display: flex;
@@ -316,7 +350,10 @@
     box-shadow: var(--shadow-sm);
 }
 
-.portal-field-p { margin-bottom: 24px; }
+.portal-field-p {
+    margin-bottom: 24px;
+}
+
 .portal-field-p label {
     display: block;
     font-size: 0.85rem;
@@ -326,7 +363,7 @@
 }
 
 /* ── Unified Form Fields (Home & Standalone) ── */
-.portal-input-p, 
+.portal-input-p,
 .portal-textarea-p,
 .portal-input,
 .portal-textarea {
@@ -350,7 +387,7 @@
     line-height: 1.6;
 }
 
-.portal-input-p:focus, 
+.portal-input-p:focus,
 .portal-textarea-p:focus,
 .portal-input:focus,
 .portal-textarea:focus {
@@ -394,8 +431,17 @@
     gap: 12px;
 }
 
-.portal-status-msg-p.success { background: #F0FDF4; color: #166534; border: 1px solid #DCFCE7; }
-.portal-status-msg-p.error { background: #FEF2F2; color: #991B1B; border: 1px solid #FEE2E2; }
+.portal-status-msg-p.success {
+    background: #F0FDF4;
+    color: #166534;
+    border: 1px solid #DCFCE7;
+}
+
+.portal-status-msg-p.error {
+    background: #FEF2F2;
+    color: #991B1B;
+    border: 1px solid #FEE2E2;
+}
 
 .portal-security-note-p {
     display: flex;
@@ -423,7 +469,9 @@
     align-items: start;
 }
 
-.contact-info-column { padding-top: 20px; }
+.contact-info-column {
+    padding-top: 20px;
+}
 
 .contact-eyebrow-premium {
     font-size: 0.75rem;
@@ -504,7 +552,10 @@
     width: 100%;
 }
 
-.portal-header { margin-bottom: 40px; }
+.portal-header {
+    margin-bottom: 40px;
+}
+
 .form-mode-tabs {
     display: flex;
     background: var(--color-bg-secondary);
@@ -523,14 +574,18 @@
     transition: all var(--t-base) var(--ease-out);
 }
 
-.mode-tab.active { 
-    background: #FFFFFF; 
+.mode-tab.active {
+    background: #FFFFFF;
     color: var(--color-text-main);
     box-shadow: var(--shadow-sm);
 }
 
 /* Home Page Specific Field Fixes */
-.portal-input-group { margin-bottom: 24px; width: 100%; }
+.portal-input-group {
+    margin-bottom: 24px;
+    width: 100%;
+}
+
 .portal-input-group label {
     display: block;
     font-size: 0.85rem;
@@ -553,24 +608,62 @@
    4. RESPONSIVE SYSTEM
    ────────────────────────────────────────── */
 @media (max-width: 1100px) {
-    .page-grid-p { gap: 40px; }
-    .portal-form-card-p { padding: 40px; }
+    .page-grid-p {
+        gap: 40px;
+    }
+
+    .portal-form-card-p {
+        padding: 40px;
+    }
 }
 
 @media (max-width: 992px) {
-    .page-grid-p { grid-template-columns: 1fr; }
-    .contact-hero-cinematic { padding: 140px 0 80px; }
-    .contact-main-grid-p { margin-top: -40px; }
-    .portal-form-card-p { position: static; order: 1; margin-bottom: 60px; }
-    .column-authority { order: 2; }
-    .hero-content-p { text-align: center; margin: 0 auto; }
-    .hero-trust-bar-p { justify-content: center; }
-    
-    .contact-layout-grid { grid-template-columns: 1fr; }
+    .page-grid-p {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero-cinematic {
+        padding: 140px 0 80px;
+    }
+
+    .contact-main-grid-p {
+        margin-top: -40px;
+    }
+
+    .portal-form-card-p {
+        position: static;
+        order: 1;
+        margin-bottom: 60px;
+    }
+
+    .column-authority {
+        order: 2;
+    }
+
+    .hero-content-p {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero-trust-bar-p {
+        justify-content: center;
+    }
+
+    .contact-layout-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 600px) {
-    .hero-title-p { font-size: 3rem; }
-    .portal-form-card-p { padding: 32px 20px; }
-    .contact-benefits-grid { grid-template-columns: 1fr; }
+    .hero-title-p {
+        font-size: 3rem;
+    }
+
+    .portal-form-card-p {
+        padding: 32px 20px;
+    }
+
+    .contact-benefits-grid {
+        grid-template-columns: 1fr;
+    }
 }

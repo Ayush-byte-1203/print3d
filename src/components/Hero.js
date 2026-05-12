@@ -37,7 +37,7 @@ const Hero = () => {
             >
                 Your browser does not support the video tag.
             </video>
-            
+
             {/* Cinematic Lighting Layers */}
             <div className="hero-overlay-top"></div>
             <div className="hero-overlay-vignette"></div>
@@ -55,7 +55,7 @@ const Hero = () => {
 
                     <div className="hero-reveal-wrap">
                         <p className="hero-desc-refined">
-                            Crafting premium 3D-printed solutions for enthusiasts and professionals. 
+                            Crafting premium 3D-printed solutions for enthusiasts and professionals.
                             From bespoke décor to industrial prototypes, we bring your most complex ideas to life.
                         </p>
                     </div>
@@ -83,13 +83,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            
-            <div className="hero-scroll-prompt">
-                <div className="scroll-mouse">
-                    <div className="scroll-wheel"></div>
-                </div>
-                <span>Discover More</span>
-            </div>
+
         </section>
     );
 };
