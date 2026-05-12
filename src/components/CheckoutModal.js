@@ -19,13 +19,16 @@ const CheckoutModal = ({ isOpen, onClose }) => {
     // Lock body scroll when modal is open
     React.useEffect(() => {
         if (isOpen) {
+            document.body.classList.add('body-checkout-open');
             document.body.style.overflow = 'hidden';
             document.documentElement.style.overflow = 'hidden';
         } else {
+            document.body.classList.remove('body-checkout-open');
             document.body.style.overflow = 'unset';
             document.documentElement.style.overflow = 'unset';
         }
         return () => {
+            document.body.classList.remove('body-checkout-open');
             document.body.style.overflow = 'unset';
             document.documentElement.style.overflow = 'unset';
         };
@@ -96,82 +99,84 @@ const CheckoutModal = ({ isOpen, onClose }) => {
                 </header>
 
                 <form className="checkout-form-premium" onSubmit={handleWhatsAppCheckout} ref={formRef}>
-                    <div className="checkout-sections">
-                        {/* Personal Info */}
-                        <div className="checkout-section">
-                            <h3 className="checkout-section-title">
-                                <User size={18} />
-                                Personal Information
-                            </h3>
-                            <div className="checkout-input-row">
-                                <div className="checkout-input-group">
-                                    <label>Full Name</label>
-                                    <input 
-                                        type="text" 
-                                        name="name" 
-                                        placeholder="Enter your name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        onFocus={handleInputFocus}
-                                        required 
-                                    />
-                                </div>
-                                <div className="checkout-input-group">
-                                    <label>Phone Number</label>
-                                    <input 
-                                        type="tel" 
-                                        name="phone" 
-                                        placeholder="Mobile number"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        onFocus={handleInputFocus}
-                                        required 
-                                    />
+                    <div className="checkout-sections-scroll">
+                        <div className="checkout-sections">
+                            {/* Personal Info */}
+                            <div className="checkout-section">
+                                <h3 className="checkout-section-title">
+                                    <User size={18} />
+                                    Personal Information
+                                </h3>
+                                <div className="checkout-input-row">
+                                    <div className="checkout-input-group">
+                                        <label>Full Name</label>
+                                        <input 
+                                            type="text" 
+                                            name="name" 
+                                            placeholder="Enter your name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            onFocus={handleInputFocus}
+                                            required 
+                                        />
+                                    </div>
+                                    <div className="checkout-input-group">
+                                        <label>Phone Number</label>
+                                        <input 
+                                            type="tel" 
+                                            name="phone" 
+                                            placeholder="Mobile number"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            onFocus={handleInputFocus}
+                                            required 
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Shipping Info */}
-                        <div className="checkout-section">
-                            <h3 className="checkout-section-title">
-                                <MapPin size={18} />
-                                Shipping Address
-                            </h3>
-                            <div className="checkout-input-group">
-                                <label>House No. / Building / Street</label>
-                                <textarea 
-                                    name="address" 
-                                    placeholder="Complete address details"
-                                    value={formData.address}
-                                    onChange={handleChange}
-                                    onFocus={handleInputFocus}
-                                    required 
-                                />
-                            </div>
-                            <div className="checkout-input-row">
+                            {/* Shipping Info */}
+                            <div className="checkout-section">
+                                <h3 className="checkout-section-title">
+                                    <MapPin size={18} />
+                                    Shipping Address
+                                </h3>
                                 <div className="checkout-input-group">
-                                    <label>City / Town</label>
-                                    <input 
-                                        type="text" 
-                                        name="city" 
-                                        placeholder="City"
-                                        value={formData.city}
+                                    <label>House No. / Building / Street</label>
+                                    <textarea 
+                                        name="address" 
+                                        placeholder="Complete address details"
+                                        value={formData.address}
                                         onChange={handleChange}
                                         onFocus={handleInputFocus}
                                         required 
                                     />
                                 </div>
-                                <div className="checkout-input-group">
-                                    <label>Pincode</label>
-                                    <input 
-                                        type="text" 
-                                        name="pincode" 
-                                        placeholder="6-digit PIN"
-                                        value={formData.pincode}
-                                        onChange={handleChange}
-                                        onFocus={handleInputFocus}
-                                        required 
-                                    />
+                                <div className="checkout-input-row">
+                                    <div className="checkout-input-group">
+                                        <label>City / Town</label>
+                                        <input 
+                                            type="text" 
+                                            name="city" 
+                                            placeholder="City"
+                                            value={formData.city}
+                                            onChange={handleChange}
+                                            onFocus={handleInputFocus}
+                                            required 
+                                        />
+                                    </div>
+                                    <div className="checkout-input-group">
+                                        <label>Pincode</label>
+                                        <input 
+                                            type="text" 
+                                            name="pincode" 
+                                            placeholder="6-digit PIN"
+                                            value={formData.pincode}
+                                            onChange={handleChange}
+                                            onFocus={handleInputFocus}
+                                            required 
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
