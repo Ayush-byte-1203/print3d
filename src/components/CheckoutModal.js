@@ -13,6 +13,33 @@ const CheckoutModal = ({ isOpen, onClose }) => {
         pincode: ''
     });
 
+    const modalRef = React.useRef(null);
+    const formRef = React.useRef(null);
+
+    // Lock body scroll when modal is open
+    React.useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+            document.documentElement.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+            document.documentElement.style.overflow = 'unset';
+        };
+    }, [isOpen]);
+
+    // Handle input focus to scroll into view (Mobile Keyboard Fix)
+    const handleInputFocus = (e) => {
+        if (window.innerWidth <= 768) {
+            setTimeout(() => {
+                e.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
+        }
+    };
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -54,7 +81,7 @@ const CheckoutModal = ({ isOpen, onClose }) => {
 
     return (
         <div className="checkout-overlay" onClick={onClose}>
-            <div className="checkout-modal-premium" onClick={(e) => e.stopPropagation()}>
+            <div className="checkout-modal-premium" onClick={(e) => e.stopPropagation()} ref={modalRef}>
                 <header className="checkout-header-premium">
                     <div className="checkout-header-title">
                         <ShieldCheck size={24} className="checkout-trust-icon" />
@@ -68,7 +95,7 @@ const CheckoutModal = ({ isOpen, onClose }) => {
                     </button>
                 </header>
 
-                <form className="checkout-form-premium" onSubmit={handleWhatsAppCheckout}>
+                <form className="checkout-form-premium" onSubmit={handleWhatsAppCheckout} ref={formRef}>
                     <div className="checkout-sections">
                         {/* Personal Info */}
                         <div className="checkout-section">
@@ -85,6 +112,7 @@ const CheckoutModal = ({ isOpen, onClose }) => {
                                         placeholder="Enter your name"
                                         value={formData.name}
                                         onChange={handleChange}
+                                        onFocus={handleInputFocus}
                                         required 
                                     />
                                 </div>
@@ -96,6 +124,7 @@ const CheckoutModal = ({ isOpen, onClose }) => {
                                         placeholder="Mobile number"
                                         value={formData.phone}
                                         onChange={handleChange}
+                                        onFocus={handleInputFocus}
                                         required 
                                     />
                                 </div>
@@ -115,6 +144,7 @@ const CheckoutModal = ({ isOpen, onClose }) => {
                                     placeholder="Complete address details"
                                     value={formData.address}
                                     onChange={handleChange}
+                                    onFocus={handleInputFocus}
                                     required 
                                 />
                             </div>
@@ -127,6 +157,7 @@ const CheckoutModal = ({ isOpen, onClose }) => {
                                         placeholder="City"
                                         value={formData.city}
                                         onChange={handleChange}
+                                        onFocus={handleInputFocus}
                                         required 
                                     />
                                 </div>
@@ -138,6 +169,7 @@ const CheckoutModal = ({ isOpen, onClose }) => {
                                         placeholder="6-digit PIN"
                                         value={formData.pincode}
                                         onChange={handleChange}
+                                        onFocus={handleInputFocus}
                                         required 
                                     />
                                 </div>

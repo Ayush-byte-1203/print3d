@@ -31,14 +31,27 @@ const Navbar = ({ setIsCartOpen }) => {
         setIsSearchOpen(false);
     }, [location.pathname, location.hash]);
 
-    // Prevent body scroll when mobile menu is open
+    // Enhanced Body Scroll Lock for Mobile Menu
     useEffect(() => {
+        const originalStyle = window.getComputedStyle(document.body).overflow;
+        const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+
         if (isMobileMenuOpen) {
+            // Prevent background scrolling completely
             document.body.style.overflow = 'hidden';
+            document.body.style.paddingRight = `${scrollBarWidth}px`; // Prevent layout shift
+            document.documentElement.style.overflow = 'hidden'; // Force lock on html element too
         } else {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflow = originalStyle;
+            document.body.style.paddingRight = '0px';
+            document.documentElement.style.overflow = 'unset';
         }
-        return () => { document.body.style.overflow = 'unset'; };
+
+        return () => {
+            document.body.style.overflow = 'unset';
+            document.body.style.paddingRight = '0px';
+            document.documentElement.style.overflow = 'unset';
+        };
     }, [isMobileMenuOpen]);
 
     const scrollToTop = () => {
@@ -119,6 +132,10 @@ const Navbar = ({ setIsCartOpen }) => {
             </div>
 
             {/* Premium Fullscreen Mobile Menu */}
+            <div 
+                className={`mobile-menu-backdrop ${isMobileMenuOpen ? 'open' : ''}`} 
+                onClick={() => setIsMobileMenuOpen(false)}
+            ></div>
             <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
                 <div className="mobile-menu-content">
                     <form className="mobile-search-form" action="/search">

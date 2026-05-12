@@ -150,12 +150,35 @@
 
 .search-dropdown.open { transform: translateY(0); }
 
-/* ── Mobile Menu (STRICT MOBILE-FIRST OPTIMIZATION) ── */
+/* ── Mobile Menu (TRUE NATIVE DRAWER EXPERIENCE) ── */
+
+/* ── Backdrop Layer ── */
+.mobile-menu-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1199;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.mobile-menu-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* ── Drawer Overlay ── */
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 85%; /* Drawer style instead of full screen */
+    max-width: 400px;
     height: 100vh;
     background: var(--color-bg-white);
     z-index: 1200;
@@ -163,7 +186,8 @@
     transition: transform 0.6s var(--ease-out-expo);
     display: flex;
     flex-direction: column;
-    padding-top: 72px; /* Fixed space for header */
+    padding-top: 80px;
+    box-shadow: 20px 0 60px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-menu-overlay.open { transform: translateX(0); }
@@ -174,16 +198,17 @@
     flex-direction: column;
     padding: 0 24px 40px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth iOS scroll */
 }
 
 .mobile-search-form {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 10px 16px; /* Reduced from 12px 18px */
+    padding: 10px 16px;
     background: var(--color-bg-secondary);
     border-radius: 12px;
-    margin-bottom: 24px; /* Reduced from 32px */
+    margin-bottom: 24px;
 }
 
 .mobile-search-form input {
@@ -192,24 +217,23 @@
     background: none;
     outline: none;
     font-family: var(--font-body);
-    font-size: 0.9rem; /* Reduced from 0.95rem */
+    font-size: 0.9rem;
     color: var(--color-text-main);
 }
 
 .mobile-nav-links {
     display: flex;
     flex-direction: column;
-    gap: 4px; /* Extreme vertical compression */
+    gap: 4px;
 }
 
 .mobile-nav-link {
     font-family: var(--font-display);
-    /* Strict Mobile-First Scaling: Very small on tiny phones, comfortable on others */
-    font-size: clamp(1.1rem, 3.5vw, 1.5rem); 
-    font-weight: 600; /* Reduced weight for better density */
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+    font-weight: 600;
     text-decoration: none;
     color: var(--color-text-main);
-    padding: 14px 0; /* Vertical rhythm */
+    padding: 14px 0;
     border-bottom: 1px solid rgba(0,0,0,0.04);
     display: flex;
     align-items: center;
@@ -236,10 +260,9 @@
     padding-top: 24px;
 }
 
-/* Compact WhatsApp Button for Mobile Menu */
 .mobile-menu-footer .btn-premium {
-    padding: 14px 20px !important; /* Significantly reduced */
-    font-size: 0.85rem !important; /* Significantly reduced */
+    padding: 14px 20px !important;
+    font-size: 0.85rem !important;
     border-radius: 14px !important;
     font-weight: 700 !important;
     letter-spacing: 0.5px !important;
@@ -262,15 +285,13 @@
     .navbar { height: 60px; }
     .logo-text { font-size: 1rem; }
     .nav-inner { padding: 0 16px; }
-    .mobile-menu-overlay { padding-top: 60px; }
+    .mobile-menu-overlay { padding-top: 60px; width: 85%; }
     .mobile-menu-content { padding: 0 20px 32px; }
     .mobile-search-form { margin-bottom: 16px; padding: 8px 14px; }
-    /* Even smaller for extra-small phones */
     .mobile-nav-link { font-size: 1.15rem; padding: 12px 0; }
     .mobile-menu-footer .btn-premium { padding: 12px 16px !important; font-size: 0.8rem !important; }
 }
 
-/* Tablet Optimization */
 @media (min-width: 481px) and (max-width: 992px) {
     .mobile-nav-link { font-size: 1.5rem; padding: 16px 0; }
     .mobile-menu-content { padding: 0 40px 40px; }
